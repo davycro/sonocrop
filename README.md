@@ -15,23 +15,21 @@ Install with pip: ```pip3 install sonocrop --upgrade```
 
 Sonocrop runs from the command line:
 
+#### crop
+
 Automatically crop away static borders
 ```shell
 sonocrop crop inputscan.mp4 out.mp4 --thresh=0.1
 ```
 
-![Input](https://davycro.s3.amazonaws.com/sonocrop-readme-in.png)
-
-Becomes
-
-![Out](https://davycro.s3.amazonaws.com/sonocrop-readme-cropped.png)
-
+#### mask
 
 Blackout static pixels
 ```shell
 sonocrop mask inputscan.mp4 out.mp4
 ```
 
+#### summary
 
 Command | Input | Output
 ------- | ----- | ------
