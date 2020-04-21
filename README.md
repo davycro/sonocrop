@@ -19,14 +19,14 @@ Sonocrop runs from the command line:
 
 Automatically crop away static borders
 ```shell
-sonocrop crop inputscan.mp4 out.mp4 --thresh=0.1
+$ sonocrop crop inputscan.mp4 out.mp4 --thresh=0.1
 ```
 
 #### mask
 
 Blackout static pixels
 ```shell
-sonocrop mask inputscan.mp4 out.mp4
+$ sonocrop mask inputscan.mp4 out.mp4
 ```
 
 #### summary
