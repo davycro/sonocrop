@@ -1,9 +1,15 @@
-# SONOCROP
+# SONOCROP [![PyPI](https://img.shields.io/pypi/pyversions/sonocrop.svg?style=plastic)](https://github.com/davycro/sonocrop)
 
-Computer vision tool to prepare bedside ultrasounds for machine learning and image interpretation. Sonocrop isolates the dynamic component of an ultrasound movie and strips away the rest.
+Prepare bedside ultrasounds for machine learning and image interpretation. Sonocrop isolates the dynamic component of an ultrasound movie and strips away the rest.
+
+## Installation
+
+Requires python 3.7 or higher
+
+Install with pip: ```pip3 install sonocrop --upgrade```
 
 
-# Usage
+## Basic usage
 
 Sonocrop runs from the command line:
 
@@ -17,9 +23,5 @@ Blackout static pixels
 sonocrop mask inputscan.mp4 out.mp4
 ```
 
-# Installation
 
-## Requirements
-Requires python 3.7 or higher
 
-```pip3 install sonocrop --upgrade```
