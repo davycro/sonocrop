@@ -2,6 +2,8 @@
 
 Prepare bedside ultrasounds for machine learning and image interpretation. Sonocrop isolates the dynamic component of an ultrasound movie and strips away the rest.
 
+![Example video](https://davycro.s3.amazonaws.com/sonocrop-readme-sidebyside.gif)
+
 ## Installation
 
 Requires python 3.7 or higher
@@ -17,6 +19,13 @@ Automatically crop away static borders
 ```shell
 sonocrop crop inputscan.mp4 out.mp4 --thresh=0.1
 ```
+
+![Input](https://davycro.s3.amazonaws.com/in.gif)
+
+Becomes
+
+![Out](https://davycro.s3.amazonaws.com/out.gif)
+
 
 Blackout static pixels
 ```shell
