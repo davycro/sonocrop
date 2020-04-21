@@ -20,11 +20,11 @@ Automatically crop away static borders
 sonocrop crop inputscan.mp4 out.mp4 --thresh=0.1
 ```
 
-![Input](https://davycro.s3.amazonaws.com/in.gif)
+![Input](https://davycro.s3.amazonaws.com/sonocrop-readme-in.png)
 
 Becomes
 
-![Out](https://davycro.s3.amazonaws.com/out.gif)
+![Out](https://davycro.s3.amazonaws.com/sonocrop-readme-cropped.png)
 
 
 Blackout static pixels
