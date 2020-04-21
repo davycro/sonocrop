@@ -51,6 +51,7 @@ setup(
     'numpy',
     'opencv-python',
     'fire',
+    'rich',
   ],
 
   entry_points={  # Optional
