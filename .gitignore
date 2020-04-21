@@ -1,3 +1,10 @@
 dist
 sonocrop.egg-info
 build
+.DS_STORE
+
+test/tmp
+
+
+__pycache__/
+*.py[cod]

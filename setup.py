@@ -7,11 +7,15 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
+version = {}
+with open(path.join(here, "sonocrop", "__version__.py")) as f:
+    exec(f.read(), version)
+
 setup(
 
   name='sonocrop',
 
-  version='0.2',
+  version=version["__version__"],
 
   description='Prepare ultrasound videos for machine learning-- crop and remove static clutter from ultrasound video.',
 
@@ -46,11 +50,12 @@ setup(
   install_requires=[
     'numpy',
     'opencv-python',
+    'fire',
   ],
 
   entry_points={  # Optional
       'console_scripts': [
-          'sono-crop=sonocrop:main',
+          'sonocrop=sonocrop.cli:main',
       ],
   },
 
