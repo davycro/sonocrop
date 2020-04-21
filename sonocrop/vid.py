@@ -64,21 +64,29 @@ def findEdges(x, thresh=0.1):
     return (left,right)
 
 
-def crop(inputfile, outputfile):
-  thresh = 0.1
+def crop(inputfile, outputfile, thresh=0.1):
   vid, fps, f, height, width = loadvideo(inputfile)
 
   u = countUniquePixelsAlongFrames(vid)
   u_avg = u/f
 
   maxW = np.max(u_avg, axis=0)
-  left,right = findEdges(maxW, thresh=0.1)
+  left,right = findEdges(maxW, thresh=thresh)
   maxH = np.max(u_avg, axis=1)
-  top,bottom = findEdges(maxH, thresh=0.1)
+  top,bottom = findEdges(maxH, thresh=thresh)
 
   cropped = vid[:,top:bottom,left:right]
   savevideo(outputfile, cropped, fps)
 
+
+
+def applyMask(vid, mask):
+    y = np.zeros_like(vid)
+    f, height, width = vid.shape
+    for i in range(f):
+        y[i][mask] = vid[i][mask]
+
+    return(y)
 
 
 
