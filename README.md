@@ -29,9 +29,22 @@ Blackout static pixels
 $ sonocrop mask inputscan.mp4 out.mp4
 ```
 
+#### edges
+
+Extracts the edges around an ultrasound
+
+Returns the distance in pixels in the form:
+left,right,top,bottom
+
+```shell
+$ sonocrop edges inputscan.mp4
+$ > 100,500,10,700
+```
+
 #### summary
 
 Command | Input | Output
 ------- | ----- | ------
 crop | ![Input](https://davycro.s3.amazonaws.com/sonocrop-readme-in.png) | ![Out](https://davycro.s3.amazonaws.com/sonocrop-readme-cropped.png)
 mask | ![Input](https://davycro.s3.amazonaws.com/sonocrop-readme-in.png) | ![Out](https://davycro.s3.amazonaws.com/sonocrop-readme-mask.png)
+edges | ![Input](https://davycro.s3.amazonaws.com/sonocrop-readme-in.png) | 237,717,72,518
