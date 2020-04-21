@@ -33,4 +33,7 @@ sonocrop mask inputscan.mp4 out.mp4
 ```
 
 
-
+Command | Input | Output
+------- | ----- | ------
+crop | ![Input](https://davycro.s3.amazonaws.com/sonocrop-readme-in.png) | ![Out](https://davycro.s3.amazonaws.com/sonocrop-readme-cropped.png)
+mask | ![Input](https://davycro.s3.amazonaws.com/sonocrop-readme-in.png) | ![Out](https://davycro.s3.amazonaws.com/sonocrop-readme-mask.png)
