@@ -1,6 +1,32 @@
 import fire
 
 
+def dir(input_directory, output_directory):
+  """Crop away static pixels from all video files in a directory
+
+  Examples
+
+  sonocrop dir input-dataset output-dataset
+
+
+  Args:
+      input_directory: Directory of video files
+      output_directory: Directory of output, must be empty
+  """
+
+  import os
+  import rich
+  from pathlib import Path
+  if not os.path.exists(output_directory):
+    os.makedirs(output_directory)
+
+  paths = Path(input_directory).glob('**/*.mp4')
+  for path in paths:
+    output_file = Path(output_directory)/path.name
+    crop(path, output_file)
+
+
+
 def crop(input_file, output_file, thresh=0.1):
   """Crop away static pixels from an ultrasound
 

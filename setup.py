@@ -52,6 +52,7 @@ setup(
     'opencv-python',
     'fire',
     'rich',
+    'matplotlib',
   ],
 
   entry_points={  # Optional

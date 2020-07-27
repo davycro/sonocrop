@@ -89,6 +89,25 @@ def applyMask(vid, mask):
     return(y)
 
 
+def validateVideo(filename: str):
+    """
+    Ensure video file has enough frames to be analyzed
+    Default value of min_frames is 50
+    """
+    capture = cv2.VideoCapture(str(filename))
+
+    frame_count = int(capture.get(cv2.CAP_PROP_FRAME_COUNT))
+    frame_width = int(capture.get(cv2.CAP_PROP_FRAME_WIDTH))
+    frame_height = int(capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    frame_rate = int(capture.get(cv2.CAP_PROP_FPS))
+
+    if frame_count < 50:
+        raise ValueError(f'{str(filename)} has {frame_count} frames. At least 50 frames are required for analysis.')
+
+    # If no errors raised then video passes validation
+    return True
+
+
 
 
 
